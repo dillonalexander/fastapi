@@ -21,4 +21,9 @@ async def hello_creator():
     viewers_count = viewer_counter.increment()
     return f"Hey, you are viewer number {viewers_count}!"
 
-
+@app.get("/new-feature")
+async def new_feature_test():
+    list_test = []
+    for n in range(10000):
+        list_test.append(n)
+    return list_test
